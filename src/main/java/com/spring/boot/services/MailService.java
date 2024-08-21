@@ -13,8 +13,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class MailService {
 
-	@Autowired
-    private JavaMailSender emailSender;    
 
 	private String to;
 	private String sub;
@@ -41,6 +39,8 @@ public class MailService {
 		this.text = text;
 	}
 
+    @Autowired
+    private JavaMailSender emailSender;    
 
     public void sendMailUtil(String to, String subject, String text) {
        System.out.println("test..........................");
